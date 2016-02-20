@@ -36,6 +36,23 @@ Quickstart
 For a really quick start, clone the repo and check out the examples folder. It
 has a paths text-file for how I saw PATHs to 1.0.0.0/12+ at the time.
 
+For your own data, there are two input methods currently:
+
+1. netconf to Junos devices
+2. Plain text file of ASPATHs
+
+Good news is that the second one is very flexible. Here are a few ways you can
+create it:
+
+.. code::
+
+    birdc 'show route table <name> all'|grep BGP\.as_path|egrep -o '[0-9]+ [0-9 ]+'
+
+
+.. code:: bash
+
+    ssh junosrtr "show route protocol bgp | match \"AS path\"" | sed -e 's/.*AS path: //g'
+
 
 Embedding In Existing Webpages
 ------------------------------
