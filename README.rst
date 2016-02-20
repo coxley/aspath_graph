@@ -8,6 +8,9 @@ aspath_graph
    :alt: Do what the fuck you want
    :height: 25px
 
+.. image:: path.png
+   :alt: Stylized example
+
 NetJSON_ is a series of JSON schema for defining networks, `NetJSON Graph`_
 being specific to defining how nodes interconnect. "aspath_graph" uses
 this to represent BGP autonomous systems as 'nodes' and how they connect
