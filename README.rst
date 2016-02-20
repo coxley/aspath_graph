@@ -21,6 +21,7 @@ be provided on the node - just under the "raw" attribute.
 
 YAML can be formatted as such: (Note that "ignore" must ONLY be ASPLAIN)
 
+.. code:: yaml
         ---
         label_map:
             65001: SFO
