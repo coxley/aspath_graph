@@ -8,6 +8,8 @@ aspath_graph
    :alt: Do what the fuck you want
    :height: 25px
 
+|
+
 .. image:: path.png
    :alt: Stylized example
 
