@@ -3,6 +3,11 @@ aspath_graph
 
 ``aspath_graph`` converts raw ASPATHs to NetJSON Graph
 
+.. image:: http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-2.png
+   :target: http://www.wtfpl.net/
+   :alt: Do what the fuck you want
+   :height: 25px
+
 NetJSON is a series of JSON schema for defining networks, NetJSON Graph
 being specific to defining how nodes interconnect. "aspath_graph" uses
 this to represent BGP autonomous systems as 'nodes' and how they connect
