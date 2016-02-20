@@ -44,14 +44,14 @@ For your own data, there are two input methods currently:
 Good news is that the second one is very flexible. Here are a few ways you can
 create it:
 
-.. code::
+.. code:: bash
 
-    birdc 'show route table <name> all'|grep BGP\.as_path|egrep -o '[0-9]+ [0-9 ]+'
+    birdc 'show route table <name> all'|grep BGP\.as_path|egrep -o '[0-9]+ [0-9 ]+' > aspaths.txt
 
 
 .. code:: bash
 
-    ssh junosrtr "show route protocol bgp | match \"AS path\"" | sed -e 's/.*AS path: //g'
+    ssh junosrtr "show route protocol bgp | match \"AS path\"" | sed -e 's/.*AS path: //g' > aspaths.txt
 
 
 Embedding In Existing Webpages
