@@ -44,7 +44,7 @@ NetJSON Graph is pretty simple to embed into existing pages and theme, thus so
 is getting your AS nodes there. I'll refer you to the README and docs for the
 main project, but below is a small example.
 
-.. code:: html
+.. code-block:: html
 
     <!DOCTYPE html>
     <html>
