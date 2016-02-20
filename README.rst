@@ -8,10 +8,13 @@ aspath_graph
    :alt: Do what the fuck you want
    :height: 25px
 
-NetJSON is a series of JSON schema for defining networks, NetJSON Graph
+NetJSON_ is a series of JSON schema for defining networks, `NetJSON Graph`_
 being specific to defining how nodes interconnect. "aspath_graph" uses
 this to represent BGP autonomous systems as 'nodes' and how they connect
 from the perspective of INPUT
+
+.. _NetJSON: http://netjson.org/
+.. _NetJSON Graph: https://github.com/interop-dev/netjsongraph.js
 
 INPUT can either be a device or file depending on value of MODE. This
 defaults to a file. (txt)
