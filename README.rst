@@ -36,8 +36,8 @@ YAML can be formatted as such: (Note that "ignore" must ONLY be ASPLAIN)
         65003.2: NYC-R2
 
     ignore:
-        + 7224
-        + 9059
+        - 7224
+        - 9059
 
 By default, ASDOT will be labeled according to the firsthalf. Eg, if 65001
 is configured to be labeled as DFW, 65001.211 will appear as DFW-R21. This
