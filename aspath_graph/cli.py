@@ -132,6 +132,8 @@ def parse_yaml(f):  # -> tuple
         content = {}
 
     label_map = content.get('label_map', {})
+    # convert all to string to make more predictable
+    label_map = {str(k): v for k, v in label_map.iteritems()}
     ignore_list = content.get('ignore', [])
     return (label_map, ignore_list)
 

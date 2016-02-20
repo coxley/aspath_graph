@@ -54,16 +54,19 @@ def generate_netjson(
         if str(node) in ignore or int(node) in ignore:
             continue
 
-        if asdot and bytesize(int(node)) > 2:
-                name = plain_to_dot(int(node))
-        else:
-            name = node
+        # if asdot and bytesize(int(node)) > 2:
+        #         name = plain_to_dot(int(node))
+        # else:
+        #     name = node
+
+        name = asn_to_label(str(node), lmap, asdot)
 
         metadata = {
             'id': name,
             # TODO: Add support to query NSoT or something for extra properties
             # such as datacenter, function, etc
-            'label': asn_to_label(str(name)),
+            'label': name,
+            # 'label': asn_to_label(str(name), lmap, asdot),
             'properties': {
                 'rawAs': node,
             },
@@ -80,10 +83,12 @@ def generate_netjson(
 
         cost = 1.0
 
-        if bytesize(int(source)) > 2:
-            source = plain_to_dot(int(source))
-        if bytesize(int(target)) > 2:
-            target = plain_to_dot(int(target))
+        # if asdot and bytesize(int(source)) > 2:
+        #     source = plain_to_dot(int(source))
+        # if asdot and bytesize(int(target)) > 2:
+        #     target = plain_to_dot(int(target))
+        source = asn_to_label(str(source), lmap, asdot)
+        target = asn_to_label(str(target), lmap, asdot)
 
         link = {
             'source': source,

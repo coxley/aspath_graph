@@ -11,6 +11,16 @@
 <body>
     <script src="d3.min.js"></script>
     <script src="netjsongraph.js"></script>
-    <script>d3.netJsonGraph("netjson.json");</script>
+    <script>
+        d3.netJsonGraph(
+            "netjson.json",
+            {
+                metadata: false,
+                circleRadius: 8,
+                charge: -250,
+                labelDy: '-1.8em',
+            }
+        );
+    </script>
 </body>
 </html>

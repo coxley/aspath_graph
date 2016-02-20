@@ -7,7 +7,6 @@ Some common utilities
 
 from __future__ import print_function
 import struct
-import os
 
 
 def dedupe(items):
@@ -28,22 +27,20 @@ def asn_to_label(asn, label_map={}, asdot=False):  # -> str
 
     asn: ASN as str
     label_map: dict of asn -> human label
-    asdot: whether to convert first or not
+    asdot: Whether to convert to ASDOT or not
     '''
     location = asn
     meta = 0
 
+    # We separate the AS into location and meta. Not all people may follow
+    # a convention like this which is why we can change suffix to '' below
     if asdot:
-        # We separate the AS into location and meta. Not all people may follow
-        # a convention like this which is why we can change suffix to '' below
         if bytesize(int(asn)) > 2:
             dot = plain_to_dot(int(asn))
             location, meta = dot.split('.')
 
-    if os.environ.get('APG_ASDOT_RAW') and dot:
-        return dot
-
-    location_name = label_map.get(location, asn)
+    # If label not found, default back to location
+    location_name = label_map.get(location, location)
     # Rack switch ASNs are assumed to be (racknumber * 10) + 1
     # Anything else is considered anycast
     if all([meta, int(meta) % 10 == 1]):
