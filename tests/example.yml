@@ -1,0 +1,11 @@
+label_map:
+  65001: SFO
+  65002: NYC
+  65003: ORD
+  65004: DFW
+  9059: AWS_EU
+  7224: AWS
+
+ignore:
+  - 7224
+  - 9059

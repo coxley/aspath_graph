@@ -1,0 +1,75 @@
+{
+  "router_id": "65044.61", 
+  "version": "0.6.6", 
+  "protocol": "oslr", 
+  "links": [
+    {
+      "source": "65002", 
+      "cost": 1.0, 
+      "target": "65003", 
+      "cost_text": "", 
+      "properties": {}
+    }, 
+    {
+      "source": "65001", 
+      "cost": 1.0, 
+      "target": "65002", 
+      "cost_text": "", 
+      "properties": {}
+    }, 
+    {
+      "source": "65044.61", 
+      "cost": 1.0, 
+      "target": "65001", 
+      "cost_text": "", 
+      "properties": {}
+    }, 
+    {
+      "source": "65003", 
+      "cost": 1.0, 
+      "target": "65004", 
+      "cost_text": "", 
+      "properties": {}
+    }
+  ], 
+  "metric": "etx", 
+  "type": "NetworkGraph", 
+  "nodes": [
+    {
+      "properties": {
+        "rawAs": "4262723645"
+      }, 
+      "id": "65044.61", 
+      "label": "65044.61"
+    }, 
+    {
+      "properties": {
+        "rawAs": "65001"
+      }, 
+      "id": "65001", 
+      "label": "65001"
+    }, 
+    {
+      "properties": {
+        "rawAs": "65002"
+      }, 
+      "id": "65002", 
+      "label": "65002"
+    }, 
+    {
+      "properties": {
+        "rawAs": "65003"
+      }, 
+      "id": "65003", 
+      "label": "65003"
+    }, 
+    {
+      "properties": {
+        "rawAs": "65004"
+      }, 
+      "id": "65004", 
+      "label": "65004"
+    }
+  ], 
+  "revision": "5031a799fcbe17f61d57e387bc3806de"
+}
