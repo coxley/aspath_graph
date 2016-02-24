@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='aspath_graph',
-    version='1.2',
+    version='1.3',
     description='Take BGP AS PATHs and generate an interactive javascript graph using NetJSON',
     author='Codey Oxley',
     author_email='codey.a.oxley+os@gmail.com',

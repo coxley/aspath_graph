@@ -57,7 +57,9 @@ def cli(ctx, **kwargs):
     relevant modes.
 
     When using "--asdot" to provide ASDOT notation, the raw ASPLAIN will also
-    be provided on the node - just under the "raw" attribute.
+    be provided on the node - just under the "raw" attribute. Note that without
+    using this option, if an ASDOT exists in the INPUT data it will be
+    represented still as ASPLAIN.
 
     YAML can be formatted as such: (Note that "ignore" must ONLY be ASPLAIN)
 

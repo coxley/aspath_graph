@@ -6,7 +6,13 @@ Ad-hoc functions that deal with transforming into what we want
 '''
 
 from __future__ import print_function
-from aspath_graph.utils import dedupe, plain_to_dot, bytesize, asn_to_label
+from aspath_graph.utils import (
+        dedupe,
+        plain_to_dot,
+        dot_to_plain,
+        bytesize,
+        asn_to_label
+)
 
 
 def link_paths(aspath, ownas=''):  # -> Dict[str, Any]
@@ -48,6 +54,12 @@ def generate_netjson(
     links = []
     for node in nodes:
 
+        # If AS in the INPUT is ASDOT, let's convert into ASPLAIN to make
+        # further operations easier. If they have provided --asdot it will
+        # present back as ASDOT
+        if len(str(node).split('.')) > 1:
+            node = dot_to_plain(node)
+
         # Test for ignored ASNs, if so skip.
         # Since input is via YAML, string and ints are tough for many so let
         # both (at this point only ASPLAIN should be in ignore)
@@ -74,6 +86,14 @@ def generate_netjson(
         nodes_metadata.append(metadata)
 
     for source, target in pairs:
+
+        # If AS in the INPUT is ASDOT, let's convert into ASPLAIN to make
+        # further operations easier. If they have provided --asdot it will
+        # present back as ASDOT
+        if len(str(source).split('.')) > 1:
+            source = dot_to_plain(source)
+        if len(str(target).split('.')) > 1:
+            target = dot_to_plain(target)
 
         # Test for ignored ASNs, if so skip
         source_in_ignore = str(source) in ignore or int(source) in ignore
