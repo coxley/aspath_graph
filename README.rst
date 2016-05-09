@@ -38,10 +38,10 @@ frontend in CSS/JS/HTML.
 Quickstart
 ----------
 
-.. note::
+.. code::
 
-    Graphing the entire internet table doesn't scale well when rendering javascript.
-    Keep that in mind when adding PATHs to graph.
+    Note: Graphing the entire internet table doesn't scale well when rendering
+    javascript. Keep that in mind when adding PATHs to graph.
 
 For a really quick start, clone the repo and check out the examples folder. It
 has a paths text-file for how I saw PATHs to 1.0.0.0/12+ at the time.
