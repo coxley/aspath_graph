@@ -129,7 +129,7 @@ def cli(ctx, **kwargs):
 def parse_yaml(f):  # -> tuple
     '''Parse YAML, returning label_map and ignore list'''
     if f:
-        content = yaml.load(f)
+        content = yaml.safe_load(f)
     else:
         content = {}
 
